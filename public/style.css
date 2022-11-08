@@ -11,11 +11,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
- :root {
-    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
-  }
-
- 
 
   .card-event{
     background: #222;
@@ -36,7 +31,7 @@
   }
 
   .btn:hover, .btn:focus {
-        background: var(--gradient) !important;
+     background: var(--gradient) !important;
     -webkit-background-clip: none !important;
     -webkit-text-fill-color: #fff !important;
     border: 5px solid #fff !important;
@@ -55,6 +50,7 @@
 
 
 :root {
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -12239,3 +12235,11 @@ textarea.form-control-lg {
   width: 4rem;
   font-size: 2rem;
 }
+.ui.grid > .row.bot-army-row {
+    flex-wrap: nowrap;
+    min-height: 100%;
+  }
+
+  .ui.grid {
+    padding: 0px 20px;
+  }
