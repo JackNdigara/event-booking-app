@@ -1,19 +1,18 @@
 import React from "react";
 
-const EventCard = ({event}) => {
-
-  // const {id, bot_class, catchphrase, health, damage, armor,avatar_url}=event;
 
 
+function EventCard ()  {
 
 
 
   return (
-    <div className="ui card" >
+    <div className="ui card">
     <div class="container mx-auto mt-4">
       <div class="row">
         <div class="col-md-4">
           <div class="card-event">
+
             <img src="https://miro.medium.com/max/720/1*_0u4XzW7F-lKTMOv1ldkNg.jpeg"
               class="card-img-top"
               alt="..."
@@ -38,12 +37,16 @@ const EventCard = ({event}) => {
               <a href="#" class="btn ">
                 <i class="fab fa-github"></i> Book Now
               </a>
+              <a href="#" class="btn ">
+                <i class="fab fa-github"></i>  9 Slots
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
     </div>
+
   );
 };
 export default EventCard;

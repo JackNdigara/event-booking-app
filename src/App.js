@@ -1,5 +1,5 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Event from "./components/events";
 import Navbar from "./components/navBar";
@@ -9,7 +9,6 @@ import FeaturedEvents from "./components/featuredEvents";
 
 function App() {
   const [bots, setBots] = useState([]);
-
 
   useEffect(() => {
     fetch("http://localhost:3000/bots")
@@ -22,16 +21,14 @@ function App() {
       });
   }, []);
   return (
-    <>
-
+    <div>
       <Navbar />
-      <Event/>
-      <EventCard/>
-      <FeaturedEvents bots={bots}/>
+      <Event />
+      <EventCard />
+      <FeaturedEvents bots={bots} />
 
-      <Footer/>
-
-    </>
+      <Footer />
+    </div>
   );
 }
 

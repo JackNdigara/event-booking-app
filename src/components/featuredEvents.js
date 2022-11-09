@@ -3,7 +3,7 @@ import EventCard from "./eventCard";
 
 
 
-const FeaturedEvents=({events,bots})=>{
+const FeaturedEvents=({bots})=>{
 
     // const eventList = Object.keys(events).map((event) => (
     //     <EventCard key={events[event].id} bot={events[event]}  />
