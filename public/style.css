@@ -11,12 +11,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
   .card-event{
     background: #222;
     border: 1px solid #dd2476;
     color: rgba(250, 250, 250, 0.8);
-    margin-bottom: 2rem;
+  }
+  .card-body{
+    margin: 3%;
   }
 
   .btn {
@@ -38,16 +39,6 @@
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
   }
-
-
-
-
-
-
-
-
-
-
 
 :root {
     --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
