@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 import Event from "./components/events";
 import Navbar from "./components/navBar";
-import EventCard from "./components/eventCard";
 import Footer from "./components/footer";
 import FeaturedEvents from "./components/featuredEvents";
 
