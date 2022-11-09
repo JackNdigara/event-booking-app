@@ -1,40 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import FeaturedAttendees from "./components/attendees/FeaturedAttendees";
-import FormLogin from "./components/Login/FormLogin";
-import Navbar from "./components/navbar/Navbar";
+import React from "react";
+import { useState, useEffect } from "react";
+
+import Event from "./components/events";
+import Navbar from "./components/navBar";
+import Footer from "./components/footer";
+import FeaturedEvents from "./components/featuredEvents";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [events, setEvents] = useState([]);
+
   useEffect(() => {
-    fetch("")
-      .then((res) => res.json())
+    fetch("http://127.0.0.1:9292/events")
+      .then((res) => {
+        return res.json();
+      })
       .then((data) => {
-        const newA = data.sort(function (a, b) {
-          var dateA = new Date(a.date),
-            dateB = new Date(b.date);
-          return dateA - dateB;
-        });
-        setData(newA);
+        setEvents(data);
+        console.log(data);
       });
   }, []);
-
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/form"
-            element={<FormLogin data={data} setData={setData} />}
-          />
+    <div>
+      <Navbar />
+      <Event />
+      <FeaturedEvents events={events} />
 
-          <Route
-            path="/featured"
-            element={<FeaturedAttendees data={setData} />}
-          />
-        </Routes>
-      </Router>
+      <Footer />
     </div>
   );
 }
