@@ -50,7 +50,7 @@ function Form({ setData, data }) {
     <div className="form">
       <div className="signup-container">
         <div className="left-container">
-          <h1>TECH ME OUT</h1>
+          <h1>Eventify</h1>
         </div>
         <div className="right-container">
           <header>
