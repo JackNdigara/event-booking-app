@@ -8,15 +8,15 @@ import Footer from "./components/footer";
 import FeaturedEvents from "./components/featuredEvents";
 
 function App() {
-  const [bots, setBots] = useState([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("http://127.0.0.1:9292/events")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setBots(data);
+        setEvents(data);
         console.log(data);
       });
   }, []);
@@ -24,8 +24,7 @@ function App() {
     <div>
       <Navbar />
       <Event />
-      <EventCard />
-      <FeaturedEvents bots={bots} />
+      <FeaturedEvents events={events} />
 
       <Footer />
     </div>
