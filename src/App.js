@@ -18,7 +18,7 @@ function App() {
       })
       .then((data) => {
         setBots(data);
-        // console.log(data);
+        console.log(data);
       });
   }, []);
   return (
