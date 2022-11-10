@@ -10,17 +10,17 @@ import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [events, setEvents] = useState([]);
   useEffect(() => {
     fetch("http://127.0.0.1:9292/events")
       .then((res) => res.json())
-      .then((data) => {
-        const newA = data.sort(function (a, b) {
+      .then((dat) => {
+        const newA = dat.sort(function (a, b) {
           var dateA = new Date(a.date),
             dateB = new Date(b.date);
           return dateA - dateB;
         });
-        setData(newA);
+        setEvents(newA);
       });
   }, []);
   return (
@@ -28,11 +28,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home events={data} />} />
-          <Route path="/events" element={<Event events={data} />} />
+          <Route path="/" element={<Home events={events} />} />
+          <Route path="/events" element={<Event events={events} />} />
           <Route
             path="/form"
-            element={<FormLogin data={data} setData={setData} />}
+            element={<FormLogin data={events} setData={setEvents} />}
           />
         </Routes>
         <Footer />
