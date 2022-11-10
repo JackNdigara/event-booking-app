@@ -6,11 +6,13 @@ const Event = () => {
       {/* <!-- Header--> */}
       <header class="py-5">
         <div class="container px-lg-5">
-          <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
-            <div class="m-4 m-lg-5">
+
+          {/* <div class="p-4 p-lg-5   p bg-light rounded-4 text-center"> */}
+          <div class="container p-3 my-3 bg-primary rounded-4 text-white text-center ">
+            <div >
               <h1 class="display-5 fw-bold"> Welcome to Eventify </h1>
-              <p class="fs-4">
-                Events Booking platform deal in events booking and events
+              <p class="lead">
+               An all Events Booking platform that deals in events booking and events
                 planning we offer members opportunity to book events with us,
                 track event status and offer detailed information about upcoming
                 events

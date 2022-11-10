@@ -30,7 +30,7 @@ const EventDetail = () => {
                 <h4 class="card-title">{event.name} </h4>
                 <p class="card-text">{event.description}</p>
 
-                
+
                <h4>Venue: {event.venue} <h4>Date: {event.date}</h4> </h4>
                <h4>Slots: {event.tickets}</h4>
                <Link to="/"> <a href="#" class="mt-auto btn btn-primary">
