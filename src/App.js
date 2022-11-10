@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Event from "./components/events";
 import Navbar from "./components/navBar";
 import Footer from "./components/footer";
-import FeaturedEvents from "./components/featuredEvents";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
+import FeaturedAttendees from "./components/attendees/FeaturedAttendees";
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -34,6 +34,7 @@ function App() {
             path="/form"
             element={<FormLogin data={events} setData={setEvents} />}
           />
+          <Route path="/featured" element={<FeaturedAttendees />} />
         </Routes>
         <Footer />
       </Router>
