@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Event from "./components/events";
 import Navbar from "./components/navBar";
 import Footer from "./components/footer";
-import FeaturedEvents from "./components/featuredEvents";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
@@ -12,6 +11,10 @@ import BookEvent from "./components/BookEvent";
 
 function App() {
   const [data, setData] = useState([]);
+
+
+  // display event details on bookEvent
+
   useEffect(() => {
     fetch("http://127.0.0.1:9292/events")
       .then((res) => res.json())
@@ -35,12 +38,7 @@ function App() {
             path="/form"
             element={<FormLogin data={data} setData={setData} />}
           />
-          <Route
-            path="/bookevent"
-            element={<BookEvent  />}
-          />
-
-
+          <Route path="/bookevent" element={<BookEvent events={data} />} />
         </Routes>
         <Footer />
       </Router>

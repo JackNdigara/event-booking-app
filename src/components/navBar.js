@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container px-lg-5">
           <Link class="navbar-brand" to="/">
-            Events Booking
+            Eventify
           </Link>
           <button
             class="navbar-toggler"
