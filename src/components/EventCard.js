@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const EventCard = ({ event,onSubmittEvent}) => {
+const EventCard = ({ event, onSubmittEvent }) => {
   const { id, name, image, date, description, venue, time, tickets } = event;
+  const navigate = useNavigate;
   const handleViewEvent = () => {
-    onSubmittEvent(event)
+    onSubmittEvent(event);
     // console.log({ id });
   };
   return (
@@ -22,11 +23,17 @@ const EventCard = ({ event,onSubmittEvent}) => {
           </h5>
           <h6 class="card-subtitle mb-2 text-muted"></h6>
           <p class="card-text">{description}</p>
-          <a href="#" class="btn mr-2">
-            <i class="fas fa-link"></i>View Event
-          </a>
+          <Link
+            to={`/events/${id}`}
+            class="btn mr-2"
+            onClick={() => navigate(`/events/${id}`)}
+          >
+            {" "}
+            View Event
+            <i class="fas fa-link"></i>
+          </Link>
           <a href="#" class="btn ">
-            <Link class="nav-link" to="/bookevent" onClick={handleViewEvent}>
+            <Link class="nav-link" to="/bookevent">
               Book Now
             </Link>
             <i class="fab fa-github"></i>

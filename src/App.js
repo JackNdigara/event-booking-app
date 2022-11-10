@@ -8,10 +8,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
 import BookEvent from "./components/BookEvent";
+import EventDetail from "./components/events/EventDetail";
 
 function App() {
   const [data, setData] = useState([]);
-
 
   // display event details on bookEvent
 
@@ -34,11 +34,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home events={data} />} />
           <Route path="/events" element={<Event events={data} />} />
+          <Route path="/events/:id" element={<EventDetail />} />
           <Route
             path="/form"
             element={<FormLogin data={data} setData={setData} />}
           />
-          <Route path="/bookevent" element={<BookEvent events={data} />} />
+          {/* <Route path="/bookevent" element={<BookEvent events={data} />} /> */}
         </Routes>
         <Footer />
       </Router>
