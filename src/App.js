@@ -8,6 +8,7 @@ import FeaturedEvents from "./components/featuredEvents";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
+import BookEvent from "./components/BookEvent";
 
 function App() {
   const [data, setData] = useState([]);
@@ -34,6 +35,12 @@ function App() {
             path="/form"
             element={<FormLogin data={data} setData={setData} />}
           />
+          <Route
+            path="/bookevent"
+            element={<BookEvent  />}
+          />
+
+
         </Routes>
         <Footer />
       </Router>

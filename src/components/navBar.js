@@ -6,9 +6,9 @@ const Navbar = () => {
       {/* <!-- Responsive navbar--> */}
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container px-lg-5">
-          <a class="navbar-brand" href="#!">
+          <Link class="navbar-brand" to="/">
             Events Booking
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
