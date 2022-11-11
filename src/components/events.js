@@ -6,8 +6,8 @@ const Event = () => {
       {/* <!-- Header--> */}
       <header class="py-5">
         <div class="container px-lg-5">
-          <div class="p-4 p-lg-5 bg-dark rounded-3 text-center">
-            <div class="m-4 m-lg-5">
+     <div class="container p-3 my-3 bg-dark rounded-4 text-white text-center ">
+           <div class="m-4 m-lg-5">
               <h1 class="display-5 fw-bold">Welcome !!</h1>
               <p class="fs-4">
                 Events Booking platform deal in events booking and events
