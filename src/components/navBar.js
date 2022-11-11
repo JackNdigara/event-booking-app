@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <>
       {/* <!-- Responsive navbar--> */}
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-lg-5">
           <a class="navbar-brand" href="#!">
             Events Booking
