@@ -37,9 +37,9 @@ cd event-booking-app
 
 👤👤 **Felix Ondulah**
 
-- GitHub: [@Kimutai01](https://github.com/Kimutai01)
-- Twitter: [@Kimutai_01](https://twitter.com/Kimutai_01?s=09)
-- LinkedIn: [@kiprotichkimutai](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
+- GitHub: [@Felix3Ondullah](https://github.com/Felix3Ondullah)
+- Twitter: [Felix)( https://twitter.com/__Nogitsune)
+- LinkedIn: [@Felix Ondullah](https://www.linkedin.com/in/felix-ondullah/)
 
 👤👤 **Jason Kiptoo **
 
