@@ -122,22 +122,16 @@ function Login({ setIsLogin }) {
             className="box-root padding-top--24 flex-flex flex-direction--column"
             style={{ flexGrow: "1", zIndex: "9", position: "relative" }}
           >
-            <div className="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-              <h1>
-                <a href="http://blog.stackfindover.com/" rel="dofollow">
-                  Eventify
-                </a>
-              </h1>
-            </div>
+            <div className="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"></div>
             <div className="formbg-outer">
               <div className="formbg">
                 <div className="formbg-inner padding-horizontal--48">
                   <span className="padding-bottom--15">
-                    Log in as Admin to add an event
+                    Log in as to add an event
                   </span>
                   <form id="stripe-login">
                     <div className="field padding-bottom--24">
-                      <label htmlFor="name">UserName</label>
+                      <label htmlFor="name">Username</label>
                       <input
                         type="text"
                         name="name"
@@ -152,7 +146,7 @@ function Login({ setIsLogin }) {
                         <label htmlFor="password">Password</label>
                       </div>
                       <input
-                        type="text"
+                        type="password"
                         name="password"
                         value={password}
                         onChange={(e) => {
@@ -168,11 +162,6 @@ function Login({ setIsLogin }) {
                         value="Continue"
                         onClick={handleSubmit}
                       />
-                    </div>
-                    <div className="field">
-                      <p className="ssolink" href="#">
-                        Use username and password as admin
-                      </p>
                     </div>
                   </form>
                 </div>

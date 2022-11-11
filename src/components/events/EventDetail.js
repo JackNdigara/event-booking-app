@@ -64,9 +64,9 @@ const EventDetail = ({ events, setEvents }) => {
                 </h4>
                 <Link to="/">
                   {" "}
-                  <a href="#" class="mt-auto btn btn-primary">
+                  <Link href="#" class="mt-auto btn btn-primary">
                     Back
-                  </a>
+                  </Link>
                 </Link>
 
                 {event.tickets > 0 ? (
@@ -89,7 +89,7 @@ const EventDetail = ({ events, setEvents }) => {
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block" src="${event.image}" alt="" />
+                    <img class="d-block" src={event.image} alt="" />
                   </div>
                 </div>
               </div>
