@@ -1,7 +1,9 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const EventCard = ({ event }) => {
   const { id, name, image, date, description, venue, time } = event;
+  const navigate = useNavigate();
 
   return (
     <div class="col-md-4 py-3">
@@ -20,12 +22,12 @@ const EventCard = ({ event }) => {
 
           <p class="card-text">{description.slice(0, 100)}...</p>
 
-          <a href="#" class="btn mr-2">
+          <Link to={`/events/${id}`} class="btn mr-2">
             <i class="fas fa-link"></i>View Event
-          </a>
-          <a href="#" class="btn ">
+          </Link>
+          <Link to={`/events/${id}`} class="btn">
             <i class="fab fa-github"></i> Book Now
-          </a>
+          </Link>
         </div>
       </div>
     </div>

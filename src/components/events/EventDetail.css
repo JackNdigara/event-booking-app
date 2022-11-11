@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+.container-specs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 600px;
+}
+.card-header img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+}
+.card-body .event-data {
+  display: flex;
+  flex-direction: row;
+}
+.card-body .event-tickets {
+  width: 50%;
+  margin-left: 100px;
+}
+.card-body .event-tickets .ticket-div {
+  width: 100px;
+}
+.card-body .event-tickets .ticket-div div {
+  font-weight: bolder;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.card-body .event-tickets .ticket-div div span {
+  width: 100%;
+}
+.card-body .event-tickets .ticket-button button {
+  background-color: #204cce;
+  color: #fff;
+  border: none;
+  margin-top: 4%;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.card-body .event-tickets .ticket-button button:hover {
+  transform: scale(1.05);
+  transition: 0.2s all ease-in-out;
+}
+
+.card-body .event-data .event-details {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-bottom: 2%;
+}
+.card-body .event-data .event-details h4 {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.card-body .event-data .event-details > div {
+  display: flex;
+  flex-direction: row;
+}
+.tag {
+  border-radius: 50px;
+  font-size: 2rem;
+  margin: 0;
+  color: black;
+
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-teal {
+  font-weight: bolder;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #545d7a;
+}
+.event-detail {
+  margin-left: 2px;
+  font-size: 1rem;
+  font-family: "Comfortaa", cursive;
+}
+#speakers-details {
+  width: 100%;
+  font-size: 1rem;
+}
+.input {
+  margin-bottom: 4%;
+  height: 2rem;
+  width: 100%;
+}
+#sold-out {
+  background-color: #204cce;
+  color: #fff;
+  border: none;
+  margin-top: 4%;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+@media (max-width: 740px) {
+  .card {
+    width: 100%;
+  }
+  .card-header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-body .event-data {
+    flex-direction: column;
+    width: 100%;
+  }
+  .card-body .event-data .event-details {
+    width: 100%;
+  }
+  .input {
+    margin-bottom: 4%;
+    height: 2rem;
+    width: 100%;
+  }
+}

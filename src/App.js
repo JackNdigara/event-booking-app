@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/events/Home";
 import FormLogin from "./components/Login/FormLogin";
 import FeaturedAttendees from "./components/attendees/FeaturedAttendees";
+import EventDetail from "./components/events/EventDetail";
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home events={events} />} />
           <Route path="/events" element={<Event events={events} />} />
+          <Route path="/events/:id" element={<EventDetail events={events} setEvents={setEvents} />} />
           <Route
             path="/form"
             element={<FormLogin data={events} setData={setEvents} />}
