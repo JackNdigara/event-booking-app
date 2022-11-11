@@ -89,11 +89,7 @@ const EventDetail = ({ events, setEvents }) => {
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img
-                      class="d-block"
-                      src="https://picsum.photos/450/300?image=1072"
-                      alt=""
-                    />
+                    <img class="d-block" src="${event.image}" alt="" />
                   </div>
                 </div>
               </div>
