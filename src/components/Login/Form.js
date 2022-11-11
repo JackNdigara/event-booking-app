@@ -12,7 +12,8 @@ function Form({ setData, data }) {
   const [date, setDate] = useState("");
   const [venue, setVenue] = useState("");
   const [time, setTime] = useState("");
-  const [speakers, setSpeakers] = useState("");
+  const [speakersName, setSpeakersName] = useState("");
+  const [speakersBio, setSpeakersBio] = useState("");
 
   const navigate = useNavigate();
   const uploadImage = (files) => {
@@ -28,8 +29,9 @@ function Form({ setData, data }) {
     });
   };
 
-  const addEvent = () => {
-    Axios.post("https://mytecheventsapi.herokuapp.com/events", {
+  const addEvent = (e) => {
+    e.preventDefault();
+    Axios.post("http://127.0.0.1:9292/events", {
       name: eventName,
       image: selectedFile,
       tickets: tickets,
@@ -37,146 +39,150 @@ function Form({ setData, data }) {
       date: date,
       venue: venue,
       time: time,
-      speakers: speakers,
     }).then((res) => {
       setData([...data, res.data]);
     });
     setTimeout(() => {
       navigate("/");
     }, 2000);
+
+    Axios.post("http://127.0.0.1:9292/speakers", {
+      name: speakersName,
+      bio: speakersBio,
+      event_id: data.length + 1,
+    });
   };
 
   return (
-    <div className="form">
-      <div className="signup-container">
-        <div className="left-container">
-          <h1>Eventify</h1>
-        </div>
-        <div className="right-container">
-          <header>
-            <h1>Add Your Event </h1>
-            <div className="set">
-              <div className="pets-name">
-                <label htmlFor="events-name">Name of the Event</label>
-                <input
-                  id="events-name"
-                  placeholder="Event Name"
-                  type="text"
-                  value={eventName}
-                  onChange={(e) => {
-                    setEventName(e.target.value);
-                  }}
-                ></input>
-              </div>
-              <div className="pets-photo">
-                <button id="pets-upload">
-                  <BiCamera className="bicam" />
-                  <input
-                    type="file"
-                    id="file-selector"
-                    onChange={(e) => {
-                      uploadImage(e.target.files);
-                    }}
-                  />
-                </button>
-                <label htmlFor="pets-upload">Upload a photo</label>
-              </div>
-            </div>
-            <div className="set">
-              <div className="pets-breed">
-                <label htmlFor="events-venue">Venue</label>
-                <input
-                  id="events-venue"
-                  placeholder="Venue..."
-                  type="text"
-                  value={venue}
-                  onChange={(e) => {
-                    setVenue(e.target.value);
-                  }}
-                ></input>
-              </div>
-              <div className="pets-birthday">
-                <label htmlFor="pets-birthday">Event Date</label>
-                <input
-                  id="pets-birthday"
-                  type="date"
-                  value={date}
-                  onChange={(e) => {
-                    setDate(e.target.value);
-                  }}
-                ></input>
-              </div>
-            </div>
-            <div className="set">
-              <div className="pets-breed">
-                <label htmlFor="events-venue">Tickets Available</label>
-                <input
-                  id="events-tickets"
-                  placeholder="Tickets Available..."
-                  type="number"
-                  value={tickets}
-                  onChange={(e) => {
-                    setTickets(e.target.value);
-                  }}
-                ></input>
-              </div>
-              <div className="pets-birthday">
-                <label htmlFor="pets-birthday">Time the Event Starts</label>
-                <input
-                  id="pets-birthday"
-                  placeholder="Time..."
-                  type="text"
-                  value={time}
-                  onChange={(e) => {
-                    setTime(e.target.value);
-                  }}
-                ></input>
-              </div>
-            </div>
+    <>
+      <div class="registration-form">
+        <form>
+          <div class="form-icon">
+            <span>{/* <i class="icon icon-user"></i> */}</span>
+          </div>
+          <div class="form-group">
+            <input
+              id="events-name"
+              className="form-control item"
+              placeholder="Enter Event Name"
+              type="text"
+              value={eventName}
+              onChange={(e) => {
+                setEventName(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              type="file"
+              className="form-control item"
+              onChange={(e) => {
+                uploadImage(e.target.files);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              id="events-venue"
+              className="form-control item"
+              placeholder="Venue..."
+              type="text"
+              value={venue}
+              onChange={(e) => {
+                setVenue(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              // id="pets-birthday"
+              className="form-control item"
+              type="date"
+              value={date}
+              onChange={(e) => {
+                setDate(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              // id="events-tickets"
+              className="form-control item"
+              placeholder="Number of tickets available..."
+              type="number"
+              value={tickets}
+              onChange={(e) => {
+                setTickets(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              className="form-control item"
+              placeholder="Time..."
+              type="text"
+              value={time}
+              onChange={(e) => {
+                setTime(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div class="form-group">
+            <input
+              className="form-control item"
+              value={speakersName}
+              placeholder="Add main speaker speakers for this event"
+              onChange={(e) => {
+                setSpeakersName(e.target.value);
+              }}
+              type="text"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              className="form-control item"
+              value={speakersBio}
+              placeholder="Add the main speakers bio for this event"
+              onChange={(e) => {
+                setSpeakersBio(e.target.value);
+              }}
+              type="text"
+            />
+          </div>
 
-            <div className="pets-weight">
-              <label htmlFor="pet-weight-0-25">Speakers at the event</label>
-              <div className="radio-container">
-                <input
-                  value={speakers}
-                  placeholder="Add the speakers for this event"
-                  onChange={(e) => {
-                    setSpeakers(e.target.value);
-                  }}
-                  type="text"
-                />
-              </div>
-              <label htmlFor="pet-weight-0-25">Event description</label>
-              <div className="radio-container">
-                <input
-                  type="text"
-                  value={description}
-                  onChange={(e) => {
-                    setDescription(e.target.value);
-                  }}
-                  placeholder="Event Description"
-                />
-              </div>
-            </div>
-          </header>
-          <footer>
-            <div className="set">
-              <button
-                id="back"
-                onClick={() => {
-                  navigate("/");
-                }}
-              >
-                Back
-              </button>
-              <button id="next" onClick={addEvent}>
-                Next
-              </button>
-            </div>
-          </footer>
-        </div>
+          <div class="form-group">
+            <input
+              className="form-control item"
+              type="text"
+              value={description}
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+              placeholder="Event Description"
+            />
+          </div>
+
+          <div class="form-group d-flex justify-content-center">
+            <button
+              className="btn btn-primary"
+              id="back"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              Back
+            </button>
+            <button
+              id="next"
+              onClick={(e) => addEvent(e)}
+              className="btn btn-primary"
+            >
+              Next
+            </button>
+          </div>
+        </form>
       </div>
-    </div>
+    </>
   );
 }
 
