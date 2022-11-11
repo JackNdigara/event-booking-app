@@ -1,17 +1,15 @@
-import React from "react"
+import React from "react";
 
-
-
-
-const Footer =()=>{
-
-
-    return (
-        // {/* <!-- Footer--> */}
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
-    )
-
-}
-export default Footer
+const Footer = () => {
+  return (
+    // {/* <!-- Footer--> */}
+    <footer class=" bg-dark fixed-bottom">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Eventify &copy; Your Website 2022
+        </p>
+      </div>
+    </footer>
+  );
+};
+export default Footer;
