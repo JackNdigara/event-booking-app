@@ -64,7 +64,7 @@ const EventDetail = ({ events, setEvents }) => {
                 </h4>
                 <Link to="/">
                   {" "}
-                  <Link href="#" class="mt-auto btn btn-primary">
+                  <Link to="/" class="btn btn-primary">
                     Back
                   </Link>
                 </Link>
