@@ -13,7 +13,7 @@
 
 [Live Demo Link]()
 ![screenshot](./scr.png)
-
+link :http://event-booking-app-rust.vercel.app/
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
