@@ -49,9 +49,8 @@ cd event-booking-app
 
 👤👤 **Peter Jackson**
 
-- GitHub: [@Kimutai01](https://github.com/Kimutai01)
-- Twitter: [@Kimutai_01](https://twitter.com/Kimutai_01?s=09)
-- LinkedIn: [@kiprotichkimutai](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
+- GitHub: [@JackNdigara](https://github.com/JackNdigara)
+- LinkedIn: [@PeterJackson Ndigara](https://www.linkedin.com/in/peterjackson-ndigara-16937724b/)
 
 ## 🤝 Contributing
 
