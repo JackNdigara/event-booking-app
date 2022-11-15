@@ -43,9 +43,9 @@ cd event-booking-app
 
 👤👤 **Jason Kiptoo **
 
-- GitHub: [@Jason](https://github.com/Kimutai01)
-- Twitter: [@Jayson](https://twitter.com/Kimutai_01?s=09)
-- LinkedIn: [@Jayson](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
+- GitHub: [@Jason](https://github.com/jasonkiptoo)
+- Twitter: [@Jayson](https://twitter.com/jason_kiptoo)
+- LinkedIn: [@Jayson](https://www.linkedin.com/in/jason-kiptoo-4641941a4)
 
 👤👤 **Peter Jackson**
 
