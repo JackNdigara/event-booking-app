@@ -41,7 +41,7 @@ cd event-booking-app
 - Twitter: [Felix)( https://twitter.com/__Nogitsune)
 - LinkedIn: [@Felix Ondullah](https://www.linkedin.com/in/felix-ondullah/)
 
-👤👤 **Jason Kiptoo **
+👤👤 **Jason Kiptoo**
 
 - GitHub: [@Jason](https://github.com/jasonkiptoo)
 - Twitter: [@Jayson](https://twitter.com/jason_kiptoo)
