@@ -10,10 +10,10 @@
 
 ![](https://img.shields.io/badge/Github-black)&nbsp;&nbsp;&nbsp;![](https://img.shields.io/badge/React-green)&nbsp;&nbsp;&nbsp;![](https://img.shields.io/badge/CSS-Yellow)&nbsp;&nbsp;&nbsp;![](https://img.shields.io/badge/Ruby-Red)
 
-
-[Live Demo Link]()
+[Link to backend](https://github.com/Kimutai01/Events-api)
 ![screenshot](./scr.png)
 link :http://event-booking-app-rust.vercel.app/
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -43,9 +43,9 @@ cd event-booking-app
 
 👤👤 **Jason Kiptoo **
 
-- GitHub: [@Kimutai01](https://github.com/Kimutai01)
-- Twitter: [@Kimutai_01](https://twitter.com/Kimutai_01?s=09)
-- LinkedIn: [@kiprotichkimutai](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
+- GitHub: [@Jason](https://github.com/Kimutai01)
+- Twitter: [@Jayson](https://twitter.com/Kimutai_01?s=09)
+- LinkedIn: [@Jayson](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
 
 👤👤 **Peter Jackson**
 
